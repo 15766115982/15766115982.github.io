@@ -20,30 +20,37 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="要坚持每天学习呀">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lzy的学习日记">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="C# Selenium 自动化实战 Day1因为毕业后进入了一家公司担任测试岗，又不想每天仅仅是进行功能测试和编写测试用例之类的工作，所以打算开始尝试一下自动化测试的技术，因为目前所在项目组的项目是基于.NET平台，使用语言是C#，IDE是VS，所以打算从头开始学一学基于VS2017和C#语言的Selenium自动化。 Day11.配置环境1.新建一个C#控制台项目。2.导入Selenium.W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Selenium_C#_Day1">
+<meta property="og:url" content="http://example.com/2022/04/29/Selenium-C-Day1/index.html">
 <meta property="og:site_name" content="Lzy的学习日记">
-<meta property="og:description" content="要坚持每天学习呀">
+<meta property="og:description" content="C# Selenium 自动化实战 Day1因为毕业后进入了一家公司担任测试岗，又不想每天仅仅是进行功能测试和编写测试用例之类的工作，所以打算开始尝试一下自动化测试的技术，因为目前所在项目组的项目是基于.NET平台，使用语言是C#，IDE是VS，所以打算从头开始学一学基于VS2017和C#语言的Selenium自动化。 Day11.配置环境1.新建一个C#控制台项目。2.导入Selenium.W">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/04/29/Selenium-C-Day1/1_1.png">
+<meta property="og:image" content="http://example.com/2022/04/29/Selenium-C-Day1/1_2.png">
+<meta property="og:image" content="http://example.com/2022/04/29/Selenium-C-Day1/1_3.png">
+<meta property="og:image" content="http://example.com/2022/04/29/Selenium-C-Day1/1_4.png">
+<meta property="article:published_time" content="2022-04-29T14:54:00.000Z">
+<meta property="article:modified_time" content="2022-04-30T07:08:31.219Z">
 <meta property="article:author" content="Nolan Lai">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/04/29/Selenium-C-Day1/1_1.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/04/29/Selenium-C-Day1/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Lzy的学习日记</title>
+  <title>Selenium_C#_Day1 | Lzy的学习日记</title>
   
 
 
@@ -161,102 +168,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/30/Selenium-C-Day2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nolan Lai">
-      <meta itemprop="description" content="要坚持每天学习呀">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lzy的学习日记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/30/Selenium-C-Day2/" class="post-title-link" itemprop="url">Selenium-C#-Day2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-04-30 10:35:34 / 修改时间：15:08:46" itemprop="dateCreated datePublished" datetime="2022-04-30T10:35:34+08:00">2022-04-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Selenium/" itemprop="url" rel="index"><span itemprop="name">C#_Selenium</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="C-Selenium-自动化实战-Day2"><a href="#C-Selenium-自动化实战-Day2" class="headerlink" title="C# Selenium 自动化实战 Day2"></a>C# Selenium 自动化实战 Day2</h1><p>昨天配置了好了Selenium C#环境，今天打算尝试一下Nunit框架。<br>今日学习内容如下：<br>1.配置Nunit环境并初步执行<br>2.学习IWebDriver的命令<br>3.学习浏览器导航(Navigate)的命令<br>4.学习WebElement以及可以在各种WebElement上执行的操作列表<br>5.学习Xpath定位元素位置</p>
-<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><h3 id="1-配置Nunit环境并初步执行"><a href="#1-配置Nunit环境并初步执行" class="headerlink" title="1.配置Nunit环境并初步执行"></a>1.配置Nunit环境并初步执行</h3><p>1.在昨天的项目中导入Nunit以及Nunit3TestAdapter包。<br><img src="/2022/04/30/Selenium-C-Day2/2-1.png" alt="RUNOOB 图标">    </p>
-<p>2.新建一个新的类，命名为NunitTest，引入包Nunit.Framework，并将代码分为3个部分：<br>启动 Chrome 浏览器：initialize<br>在 Selenium 启动的浏览器中打开网站：OpenTestApp<br>关闭浏览器：EndTest<br>  然后通过 Build &gt;&gt; Build Solution 构建解决方案（注意要先打开测试资源管理器）。<br><img src="/2022/04/30/Selenium-C-Day2/2-2.png" alt="RUNOOB 图标"><br><img src="/2022/04/30/Selenium-C-Day2/2-3.png" alt="RUNOOB 图标"><br>发现build后虽然成功了，但是测试资源管理器并没有出现测试case。<br>后来发现是需要添加NUnit Annotations，谷歌找了一下它的介绍：<br><img src="/2022/04/30/Selenium-C-Day2/2-4.png" alt="RUNOOB 图标"><br><img src="/2022/04/30/Selenium-C-Day2/2-5.png" alt="RUNOOB 图标"><br>这里列举了部分用法，我刚开始只需要[Setup],[Test],[TearDown]就可以，其中[Setup]是执行test前调用的板块，[TearDown]是Test执行完后执行的板块，[Test]是测试的主要模块。<br>注意这三个Annotations添加进去后，测试资源管理器中测试板块就有case了：<br><img src="/2022/04/30/Selenium-C-Day2/2-6.png" alt="RUNOOB 图标"></p>
-<p>3.右键执行测试或用ctrl+R+T,成功后测试资源管理器中的测试就会出现通过标志：<br><img src="/2022/04/30/Selenium-C-Day2/2-7.png" alt="RUNOOB 图标"><br>note:我这里的url地址换了个，之前写错了。   </p>
-<h3 id="2-学习IWebDriver的命令"><a href="#2-学习IWebDriver的命令" class="headerlink" title="2.学习IWebDriver的命令"></a>2.学习IWebDriver的命令</h3><p>1.研究IWebDriver命令的时候可以借用VS这个IDE来研究，利用IWerDriver创建一个驱动程序对象并键入一个 . 后VS会出现下拉框提示可以接什么命令：<br><img src="/2022/04/30/Selenium-C-Day2/2-8.png" alt="RUNOOB 图标"><img src="/2022/04/30/Selenium-C-Day2/2-9.png" alt="RUNOOB 图标"><br>其中driver.Url是获取Url,使用方式如下：<br><code>driver.Url = &quot;需要打开的网址&quot;;</code><br><code> String Url = driver.Url; //Url是string类型，用于获取网址</code><br>driver.Title是用来获取打开的页面的标题：<br><code>String Title = driver.Title;</code><br>driver.PageSource是用来获取页面的源代码：<br><code> String PageSource = driver.PageSource;</code><br>driver.Close是用来关闭当前被控制的窗口：<br><code> driver.Close();</code><br>driver.Quit与Close相似，但是Quit是关闭所有被控制的窗口，而Close只是关闭当前的那个:<br><code> driver.Quit();</code>   </p>
-<p>2.测试Tile和Url能否存储和输出成功：<br><img src="/2022/04/30/Selenium-C-Day2/2-10.png" alt="RUNOOB 图标">   </p>
-<h3 id="3-学习浏览器导航-Navigate-的命令"><a href="#3-学习浏览器导航-Navigate-的命令" class="headerlink" title="3.学习浏览器导航(Navigate)的命令"></a>3.学习浏览器导航(Navigate)的命令</h3><p>1.先用VS查看driver.Naivgate(). 后可以接的命令：<br><img src="/2022/04/30/Selenium-C-Day2/2-11.png" alt="RUNOOB 图标">    </p>
-<p>2.其中主要常用的功能和其使用方法如下：<br>GoToUrl是导航到指定网站，与driver.Url功能差不多:<br><code>driver.Navigate().GoToUrl(&quot;Url网站&quot;);</code><br>Back用于导航到当前浏览器记录的上一页，功能与点击浏览器返回按钮一致：<br><code>driver.Naivgate().Back();</code><br>Forward用于导航到当前浏览器记录的下一页，功能与浏览器前进功能一致：<br><code>driver.Navigate().Forward();</code><br>Refresh用于刷新页面，与浏览器刷新按钮（F5）功能一致：<br><code>driver.Navigate().Refresh();</code>  </p>
-<p>3.测试功能是否成功(为了让页面停留，导入了System.Threading)：<br><img src="/2022/04/30/Selenium-C-Day2/2-12.png" alt="RUNOOB 图标"> </p>
-<h3 id="4-学习WebElement以及可以在各种WebElement上执行的操作列表"><a href="#4-学习WebElement以及可以在各种WebElement上执行的操作列表" class="headerlink" title="4.学习WebElement以及可以在各种WebElement上执行的操作列表"></a>4.学习WebElement以及可以在各种WebElement上执行的操作列表</h3><p>1.IWebElemnt动作：<br><img src="/2022/04/30/Selenium-C-Day2/2-13.png" alt="RUNOOB 图标"><br><img src="/2022/04/30/Selenium-C-Day2/2-14.png" alt="RUNOOB 图标"><br><img src="/2022/04/30/Selenium-C-Day2/2-15.png" alt="RUNOOB 图标">  </p>
-<p>2.获取IWebElemnt元素；在执行这些动作前，需要跟driver一样先获取对象，一般是采用FindElement来获取对象：<br><code>IWebElement element = driver.FindElement(By.方法(&quot;ID或路径&quot;));</code><br>需要注意的是IWebElement可以是任何类型，比如Text、Link、Radio Button或者其余HTML元素，即便是这些元素有些动作无法执行，比如对象元素是链接，但是仍可以clear()，只是这样可能会导致一些错误或者无法执行。  </p>
-<p>3.IWebElement常用命令动作：<br>Clear()：清除命令<br><code>element.clear();</code>  </p>
-<p>SendKeys():发送键命令<br><code>element.SendKeys(&quot;需要键入的值&quot;);</code>  </p>
-<p>Click():单击命令<br><code>element.Click()  //点击的元素必须是可见的，高度宽度大于0</code>  </p>
-<p>Displayed:显示命令<br><code>element.Displayed; //该值不接受传参，但是返回布尔值，存在且显示则True</code>  </p>
-<p>Enabled:启用命令<br><code>element.Enabled;  //不接受传参，元素启用则返回True</code>  </p>
-<p>Selected:选定命令<br><code>element.Selected;  //元素选中则返回True</code>  </p>
-<p>Submit():提交命令<br><code>element.Submit(); //类似Click，但是一般用于表单或者表单中的元素</code>  </p>
-<p>Text:文本命令<br><code>element.Text; //接受元素的可见值innerText值，返回string</code></p>
-<p>Location:定位命令<br><code>element.Location(); //获取元素对象的xy坐标</code>  </p>
-<p>4.FindElement&#x2F;FindElements:<br>FindElement()方法接受一些东西作为 Parameter&#x2F;Argument 并且是By Object。By是用于在定位器值的帮助下在文档中定位元素的机制。By的正常语法如下所示：<br><code>IWebElement Account = driver.FindElement(By.ID(&quot;Account&quot;));</code><br>或：<br><code>By Locator = By.ID(&quot;Account&quot;);</code><br><code> IWebElement Account = driver.FindElement(Locator);</code><br>其中，By的动作策略列表如下:<br><img src="/2022/04/30/Selenium-C-Day2/2-16.png" alt="RUNOOB 图标"><br>因为参考组内大佬一般是用Xpath定位的，所以打算之后学学Xpath定位（虽然Chrome可以直接右键元素“检查”定位到具体位置再右键Copy-Xpath就有了，但是这个很复杂，很长，尽量自己学学精简一下，然后代码很难看)  </p>
-<p>FindElement&#x2F;FindElements的区别：<br>FindElement()和FindElements()方法之间的区别是第一个返回一个WebElement对象，否则它会抛出异常，后者返回一个WebElements列表，如果没有 DOM 元素与查询匹配，它可以返回一个空列表。  </p>
-<h3 id="5-学习Xpath定位元素位置"><a href="#5-学习Xpath定位元素位置" class="headerlink" title="5.学习Xpath定位元素位置"></a>5.学习Xpath定位元素位置</h3><p>1.Selenium中的Xpath函数？<br>因为页面中几个不同的元素可能具有相同或相似的属性，所以有时候不仅仅是ID什么的无法定位，Xpath也有可能会返回多个值，所以这个时候要借用Xpath函数，帮助Xpath有效的标识唯一元素。  </p>
-<p>2.Xpath Contains()函数:<br>XPath Contains()是创建XPath表达式时使用的方法之一。如果任何属性的部分值动态变化，我们可以使用它它可以通过使用其部分值来识别任何属性。使用 XPath contains()方法的语法是：<br><code>tag_name[contains(@attribute,&#39;value_of_attribute&#39;)]</code><br>其中，attribute为元素的标记属性，value是属性包含的部分值。<br><img src="/2022/04/30/Selenium-C-Day2/2-17.png" alt="RUNOOB 图标"><br>上图的Contans函数为：<br><code>//div[contains(@class,&#39;login&#39;)]//button</code><br>或<br><code>//button[contains(.,&#39;Log&#39;)] </code></p>
-<p>3.XPath Starts-with()函数：<br>顾名思义，XPath starts-with()函数查找具有以特定给定字符或字符序列开头的属性值的元素。此功能在处理动态网页时非常有用。想象一个元素，其属性值随着每次页面加载或页面操作而不断变化。通常，这些动态元素很少有共同的起始字符，然后是随机的动态文本。除了动态属性，这也可以识别静态元素。<br>Starts-with()方法的语法是：<br><code>tag_name[starts-with(@attribute,&#39;Part_of_Attribute_value&#39;)]</code>  </p>
-<p>4.XPath text()函数：<br>此功能使用网页元素的文本来定位网页上的元素。如果您的元素包含文本，例如标签，则此功能非常有用，标签始终包含静态文本。<br>XPath中text()函数的语法是:<br><code>//tag_name[text()=&#39;Text of the element&#39;]</code><br>还是下图<br><img src="/2022/04/30/Selenium-C-Day2/2-17.png" alt="RUNOOB 图标"><br><code>//button[text()=&#39;Login&#39;]&quot;</code>  </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -272,10 +187,9 @@
       <meta itemprop="name" content="Lzy的学习日记">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/29/Selenium-C-Day1/" class="post-title-link" itemprop="url">Selenium_C#_Day1</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Selenium_C#_Day1
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -304,6 +218,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -314,7 +235,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr>
+        <hr>
 <h1 id="C-Selenium-自动化实战-Day1"><a href="#C-Selenium-自动化实战-Day1" class="headerlink" title="C# Selenium 自动化实战 Day1"></a>C# Selenium 自动化实战 Day1</h1><p>因为毕业后进入了一家公司担任测试岗，又不想每天仅仅是进行功能测试和编写测试用例之类的工作，所以打算开始尝试一下自动化测试的技术，因为目前所在项目组的项目是基于.NET平台，使用语言是C#，IDE是VS，所以打算从头开始学一学基于VS2017和C#语言的Selenium自动化。</p>
 <h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><h3 id="1-配置环境"><a href="#1-配置环境" class="headerlink" title="1.配置环境"></a>1.配置环境</h3><p>1.新建一个C#控制台项目。<br>2.导入Selenium.Webdriver包。<br><img src="/2022/04/29/Selenium-C-Day1/1_1.png" alt="RUNOOB 图标"><img src="/2022/04/29/Selenium-C-Day1/1_2.png" alt="RUNOOB 图标"><br>3.因为要用Chrome作测试，导入Selenium.Webdriver.ChromeDriver包 。<br><img src="/2022/04/29/Selenium-C-Day1/1_3.png" alt="RUNOOB 图标"><br>4.因为导入了包，所以在代码中需要引入命名空间：<br>using OpenQA.Selenium;<br>using OpenQA.Selenium.Chrome;  </p>
 <h3 id="2-驱动打开百度"><a href="#2-驱动打开百度" class="headerlink" title="2.驱动打开百度"></a>2.驱动打开百度</h3><p>5.在Main函数中写入如下代码：  </p>
@@ -323,27 +244,58 @@
 </code></pre>
 <p>6.运行结果：<br><img src="/2022/04/29/Selenium-C-Day1/1_4.png" alt="1_4 结果"></p>
 
-      
     </div>
 
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Nolan Lai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/04/29/Selenium-C-Day1/" title="Selenium_C#_Day1">http://example.com/2022/04/29/Selenium-C-Day1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/04/30/Selenium-C-Day2/" rel="next" title="Selenium-C#-Day2">
+      Selenium-C#-Day2 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
 
-  
-
-
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81NjI0NC8zMjcwNw=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -390,6 +342,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Selenium-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E6%88%98-Day1"><span class="nav-number">1.</span> <span class="nav-text">C# Selenium 自动化实战 Day1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1"><span class="nav-number">1.1.</span> <span class="nav-text">Day1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.配置环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%A9%B1%E5%8A%A8%E6%89%93%E5%BC%80%E7%99%BE%E5%BA%A6"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.驱动打开百度</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -550,6 +503,21 @@ $(document).ready(function() {
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 </body>
 </html>
