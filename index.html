@@ -167,6 +167,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/30/BurpSuite-Day1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nolan Lai">
+      <meta itemprop="description" content="要坚持每天学习呀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lzy的学习日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/30/BurpSuite-Day1/" class="post-title-link" itemprop="url">BurpSuite_Day1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-04-30 19:02:29" itemprop="dateCreated datePublished" datetime="2022-04-30T19:02:29+08:00">2022-04-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-01 01:02:04" itemprop="dateModified" datetime="2022-05-01T01:02:04+08:00">2022-05-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Burp-Suite/" itemprop="url" rel="index"><span itemprop="name">Burp Suite</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Burp-Suite入门-Day1"><a href="#Burp-Suite入门-Day1" class="headerlink" title="Burp Suite入门 Day1"></a>Burp Suite入门 Day1</h1><p>今天学习了Burp Suite的基本功能使用</p>
+<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><p>##1. 配置环境<br>###1. 下载Burp Suite<br><a target="_blank" rel="noopener" href="https://portswigger.net/burp/communitydownload">Burp Suite下载网址</a>  </p>
+<h2 id="2-使用Burp代理拦截HTTP流量"><a href="#2-使用Burp代理拦截HTTP流量" class="headerlink" title="2. 使用Burp代理拦截HTTP流量"></a>2. 使用Burp代理拦截HTTP流量</h2><h3 id="1-打开Burp自带的浏览器"><a href="#1-打开Burp自带的浏览器" class="headerlink" title="1. 打开Burp自带的浏览器"></a>1. 打开Burp自带的浏览器</h3><ol>
+<li>先将Burp的拦截开关打开：<br><img src="/2022/04/30/BurpSuite-Day1/1-1.png" alt="1-1 png">   </li>
+<li>打开Burp自带的浏览器（已经预设过了，不需要再自己配置）：   </li>
+<li>调整窗口，确保能同时看见Burp和浏览器，方便之后操作。<h3 id="2-拦截一次请求"><a href="#2-拦截一次请求" class="headerlink" title="2. 拦截一次请求"></a>2. 拦截一次请求</h3></li>
+<li>使用打开的浏览器访问<a target="_blank" rel="noopener" href="https://portswigger.net/">这个网址</a>。</li>
+<li>前往Proxy &gt; Intercept页面查看拦截的请求。<br><img src="/2022/04/30/BurpSuite-Day1/1-2.png" alt="1-2 png">   <h3 id="3-转发请求"><a href="#3-转发请求" class="headerlink" title="3. 转发请求"></a>3. 转发请求</h3></li>
+<li>点击Forward转发请求。<br><img src="/2022/04/30/BurpSuite-Day1/1-3.png" alt="1-3 png"></li>
+</ol>
+<h3 id="4-查看拦截Http历史"><a href="#4-查看拦截Http历史" class="headerlink" title="4. 查看拦截Http历史"></a>4. 查看拦截Http历史</h3><ol>
+<li>Proxy &gt; HTTP history页面可以查看拦截历史，即便是拦截开关关闭了，只要经过了Burp就可以查看。<br><img src="/2022/04/30/BurpSuite-Day1/1-4.png" alt="1-4 png">  </li>
+<li>在HTTP history页面点击历史记录，可以查看到记录的详细情况，便于研究浏览器与服务器之间的联系。<br><img src="/2022/04/30/BurpSuite-Day1/1-5.png" alt="1-5 png"></li>
+</ol>
+<h2 id="3-使用Burp代理修改HTTP请求"><a href="#3-使用Burp代理修改HTTP请求" class="headerlink" title="3. 使用Burp代理修改HTTP请求"></a>3. 使用Burp代理修改HTTP请求</h2><h3 id="1-打开测试环境"><a href="#1-打开测试环境" class="headerlink" title="1. 打开测试环境"></a>1. 打开测试环境</h3><ol>
+<li>打开Burp自带的浏览器，注意先关闭拦截功能。  </li>
+<li>点击<a target="_blank" rel="noopener" href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls">这个网址</a>。  （进去前先去<a target="_blank" rel="noopener" href="https://portswigger.net/users/register">这里</a>注册账号）</li>
+<li>网址登录后点击“Access the lab”进入测试环境，登入账号后即可使用。<br> Username: wiener<br>Password: peter<br><img src="/2022/04/30/BurpSuite-Day1/1-6.png" alt="1-6 png">  <h3 id="2-通过修改请求来改写价格"><a href="#2-通过修改请求来改写价格" class="headerlink" title="2.通过修改请求来改写价格"></a>2.通过修改请求来改写价格</h3></li>
+<li>回到Burp开启拦截功能，然后去网站添加一款商品到购物车，在添加后拦截请求，通过请求修改修改价格，再回去查看购物车：<br><img src="/2022/04/30/BurpSuite-Day1/1-7.png" alt="1-7 png"><br><img src="/2022/04/30/BurpSuite-Day1/1-8.png" alt="1-8 png"></li>
+</ol>
+<p>##4. 使用Burp Repeater重复发出请求<br>###1. 获取http历史记录</p>
+<ol>
+<li>重复登录之前的<a target="_blank" rel="noopener" href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls">测试网站</a>  </li>
+<li>点击多个商品操作，查看http历史记录，并对最左侧#号排序，序列号最大的即是最新的请求。<br>![1-9 png](1-9.png）  </li>
+<li>通过观察，点击带有product url头的请求，右键送去Repeater板块。<br><img src="/2022/04/30/BurpSuite-Day1/1-10.png" alt="1-10 png">  </li>
+<li>在Repeater改写ProductID再发送请求，观察不同的响应。<br><img src="/2022/04/30/BurpSuite-Day1/1-11.png" alt="1-11 png"><br><img src="/2022/04/30/BurpSuite-Day1/1-12.png" alt="1-12 png"><br><img src="/2022/04/30/BurpSuite-Day1/1-13.png" alt="1-13 png"></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/30/Selenium-C-Day3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -497,20 +597,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
