@@ -167,6 +167,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/30/Selenium-C-Day3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nolan Lai">
+      <meta itemprop="description" content="要坚持每天学习呀">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lzy的学习日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/04/30/Selenium-C-Day3/" class="post-title-link" itemprop="url">Selenium_C#_Day3</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-30 15:15:16 / 修改时间：17:10:58" itemprop="dateCreated datePublished" datetime="2022-04-30T15:15:16+08:00">2022-04-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-Selenium/" itemprop="url" rel="index"><span itemprop="name">C#_Selenium</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="C-Selenium-自动化实战-Day3"><a href="#C-Selenium-自动化实战-Day3" class="headerlink" title="C# Selenium 自动化实战 Day3"></a>C# Selenium 自动化实战 Day3</h1><p>为了加快进度，打算元素定位和整体框架一起实战学，所以今天开始进行学习框架搭建。</p>
+<h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><h3 id="1-新建项目"><a href="#1-新建项目" class="headerlink" title="1.新建项目"></a>1.新建项目</h3><ol>
+<li><p>新建一个C# Class Library项目。<br><img src="/2022/04/30/Selenium-C-Day3/3-1.png" alt="3-1 png">  </p>
+</li>
+<li><p>新建一个TestCase文件夹，并添加一个FirstTest的Class文件。<br><img src="/2022/04/30/Selenium-C-Day3/3-2.png" alt="3-2 png"><br><img src="/2022/04/30/Selenium-C-Day3/3-3.png" alt="3-3 png">  </p>
+</li>
+<li><p>配置好Selenium环境和Nunit环境。</p>
+</li>
+</ol>
+<h3 id="2-C-PageFactory"><a href="#2-C-PageFactory" class="headerlink" title="2.C# PageFactory"></a>2.C# PageFactory</h3><ol>
+<li><p>C#类中的PageFactory是页面对象设计模式的扩展。它是 Selenium WebDriver 的内置 POM 概念，但经过了非常优化。它用于初始化页面对象的元素或实例化页面对象本身。也可以创建（并推荐）元素的注释，因为描述属性可能并不总是足以描述一个对象与另一个对象。<br>  它用于初始化Page 类的元素，而不必使用“ FindElement ”或“ FindElements ”。注释可用于提供目标对象的描述性名称以提高代码可读性。<br>PageObjects是Selenium 中的一种对象设计模式，其中网页被表示为类。页面上的各种元素被定义为类上的变量。然后，所有可能的用户交互都可以作为类上的方法来实现。由于类中命名良好的方法易于阅读，因此这是一种实现测试例程的优雅方式，这些例程既可读又易于维护或在未来更新。  </p>
+</li>
+<li><p>@FindBy 注解<br>顾名思义，它有助于使用By策略 在页面中查找元素。@FindBy 可以接受TagName、PartialLinkText、Name、LinkText、Id、Css、ClassName、XPath 作为属性。用于定位元素或元素列表的替代机制。这允许用户快速轻松地创建 PageObjects。<br>下面面的代码将创建一个PageObject并将其命名为UserName，方法是使用其ID定位器找到它。  <code>[FindsBy(How = How.Id, Using = &quot;username&quot;)] </code><br><code>private IWebElement UserName &#123; get; set; &#125;</code>  </p>
+</li>
+<li><p>初始化元素<br>实例化给定类的实例。此方法将尝试实例化给它的类，最好使用将 WebDriver 实例作为其唯一参数的构造函数，或者使用无参数构造函数。如果无法实例化该类，则会引发异常。<br>WebDriver - 用于查找元素的驱动程序<br>PageObjects - 将被初始化的类<br><code>PageFactory.InitElements(WebDriver, PageObject);</code></p>
+</li>
+<li><p>PageFactory 命名空间<br>使用PageFactory需要引入DoNetSeleniumExtras.PageObjects库，并引用以下命名空间：<br><code>using SeleniumExtras.PageObjects;;</code></p>
+</li>
+<li><p>实战</p>
+</li>
+</ol>
+<h2 id="实战遇到的问题"><a href="#实战遇到的问题" class="headerlink" title="实战遇到的问题"></a>实战遇到的问题</h2><h3 id="1-PageFactory-InitElements-初始化报错"><a href="#1-PageFactory-InitElements-初始化报错" class="headerlink" title="1.PageFactory.InitElements()初始化报错"></a>1.PageFactory.InitElements()初始化报错</h3><p>报错结果如下：<br><img src="/2022/04/30/Selenium-C-Day3/3-4.png" alt="3-4 png">  </p>
+<p>root casue:<br>Selenium.WebDriver、Selenium.Support是4.1.1版本的，但是DotNetSeleniumExtras.PageObjects是3.11.0版本的。<br>谷歌看了很多大佬的介绍，试了很多方法，发现降低Selenium.WebDriver、Selenium.Support、DotNetSeleniumExtras.PageObjects为同一版本可解决此问题。<br><img src="/2022/04/30/Selenium-C-Day3/3-8.png" alt="3-8 png"></p>
+<h3 id="2-Xpath定位元素出错"><a href="#2-Xpath定位元素出错" class="headerlink" title="2.Xpath定位元素出错"></a>2.Xpath定位元素出错</h3><p>报错结果如下：<br><img src="/2022/04/30/Selenium-C-Day3/3-5.png" alt="3-5 png">  </p>
+<p>root cause：<br>是因为我在Xpath定位中用了”&#x2F;&#x2F;input[contains(.,’pass’)]”，因为 . 是匹配当前节点下的所有属性，而页面中这个节点具有很多同名的，所以出错了，要匹配具体属性才行，比如”&#x2F;&#x2F;input[contains(@id,’pass’)]”.<br><img src="/2022/04/30/Selenium-C-Day3/3-6.png" alt="3-6 png"><br><img src="/2022/04/30/Selenium-C-Day3/3-7.png" alt="3-7 png">  </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/30/Selenium-C-Day2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -181,7 +273,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/30/Selenium-C-Day2/" class="post-title-link" itemprop="url">Selenium-C#-Day2</a>
+            <a href="/2022/04/30/Selenium-C-Day2/" class="post-title-link" itemprop="url">Selenium_C#_Day2</a>
         </h2>
 
         <div class="post-meta">
@@ -192,7 +284,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-04-30 10:35:34 / 修改时间：15:08:46" itemprop="dateCreated datePublished" datetime="2022-04-30T10:35:34+08:00">2022-04-30</time>
+              <time title="创建时间：2022-04-30 10:35:34 / 修改时间：15:14:32" itemprop="dateCreated datePublished" datetime="2022-04-30T10:35:34+08:00">2022-04-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -405,7 +497,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -414,6 +506,12 @@
           
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
